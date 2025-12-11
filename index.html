@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHÉP ẢNH SIÊU VIP THIỆN MOD VIP PREMIUM 2.0</title>
+    <style>
+        /* BASE & FONT */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #05050f; 
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            /* Hiệu ứng chớp chớp đèn nền (Tăng cường) */
+            animation: background-flicker 10s infinite alternate, body-breathing 4s infinite alternate;
+        }
+        @keyframes background-flicker {
+            0% { background-color: #05050f; }
+            50% { background-color: #0f0515; }
+            100% { background-color: #05050f; }
+        }
+        /* Hiệu ứng nhún/thở cho toàn bộ body */
+        @keyframes body-breathing {
+            from { transform: scale(1); }
+            to { transform: scale(1.005); }
+        }
+
+        /* LOGO & HEADING */
+        .logo-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo-header h1 {
+            font-size: 3em; 
+            color: #fff;
+            margin: 0;
+            letter-spacing: 5px;
+            /* Hiệu ứng Neon cực mạnh */
+            animation: super-neon 1.2s ease-in-out infinite alternate;
+        }
+        .logo-header p {
+            color: #ddd;
+            font-size: 1.2em;
+            margin: 5px 0 0 0;
+            border-bottom: 3px solid #ff33ff;
+            padding-bottom: 5px;
+        }
+        @keyframes super-neon {
+            0% { text-shadow: 0 0 7px #ff33ff, 0 0 15px #ff33ff, 0 0 25px #00aaff, 0 0 40px #00aaff; }
+            100% { text-shadow: 0 0 10px #ff77ff, 0 0 20px #ff77ff, 0 0 35px #00ccff, 0 0 60px #00ccff; }
+        }
+
+        /* CONTAINER & ELEMENTS */
+        .container {
+            background-color: rgba(20, 20, 20, 0.98);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 51, 255, 0.7); 
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 25px;
+            border: 2px solid #ff33ff;
+            transition: box-shadow 0.3s;
+            animation: container-flicker 1.5s infinite alternate; 
+        }
+        @keyframes container-flicker {
+            from { border-color: #ff33ff; }
+            to { border-color: #00aaff; }
+        }
+
+        h3 {
+            color: #00aaff;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+            margin-top: 5px;
+            text-shadow: 0 0 5px #00aaff;
+        }
+        label {
+            color: #00aaff;
+            text-shadow: 0 0 5px #00aaff;
+        }
+        input[type="file"], select, input[type="range"], input[type="text"], input[type="password"] {
+            border: 1px solid #ff33ff;
+            box-shadow: 0 0 8px rgba(255, 51, 255, 0.5);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff33ff; 
+            color: #0d0d0d;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 51, 255, 1);
+        }
+        button:hover { 
+            background-color: #ff77ff; 
+            box-shadow: 0 0 20px rgba(255, 119, 255, 1);
+        }
+        .success-button {
+            background-color: #00aaff; 
+            box-shadow: 0 0 15px rgba(0, 170, 255, 1);
+        }
+        .success-button:hover {
+            background-color: #4dc2ff;
+            box-shadow: 0 0 20px rgba(77, 194, 255, 1);
+        }
+        
+        /* ACCOUNT & BALANCE */
+        .account-box {
+            border: 2px solid #00aaff;
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+        }
+        .balance-box {
+            border: 2px solid #ff33ff;
+            box-shadow: 0 0 15px rgba(255, 51, 255, 0.5);
+        }
+        .balance-box h3 {
+            color: #FFD700;
+        }
+
+        /* ADMIN TOOL STYLES */
+        #adminToolBox {
+            background-color: #222;
+            border: 3px solid #FFD700;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #FFD700;
+        }
+        #adminDashboard .admin-controls-group {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        #adminDashboard .admin-controls-group input {
+            flex-grow: 1;
+        }
+        .admin-quick-actions button {
+             width: auto;
+             padding: 10px 15px;
+             font-size: 1em;
+             margin-top: 10px;
+        }
+        #adminUserList {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* RESULT & CANVAS */
+        #outputCanvas {
+            border: 3px solid #ffffff; 
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        #downloadLink {
+            background-color: #00aaff;
+            box-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+        }
+        /* AI BUTTON */
+        #ai-support-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.5em;
+            line-height: 60px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 0 15px #4CAF50;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-header">
+        <h1>THIỆN MOD VIP</h1>
+        <p>PREMIUM 2.0</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="account-box">
+            <h3>🔐 Quản Lý Tài Khoản</h3>
+            
+            <div id="loggedOutView">
+                <input type="text" id="usernameInput" placeholder="Nhập tên đăng nhập">
+                <button onclick="registerUser()" class="success-button" style="width: 48%; float: left; margin-right: 4%;">ĐĂNG KÝ (Tạo TK mới)</button>
+                <button onclick="loginUser()" style="width: 48%;">ĐĂNG NHẬP</button>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div id="loggedInView" style="display: none;">
+                <div class="account-info">
+                    <h4>Xin chào, <span id="currentUsername"></span>!</h4>
+                    <button onclick="logoutUser()" style="width: auto; padding: 10px 20px; background-color: #555; margin-top: 10px; color: #fff; box-shadow: none;">ĐĂNG XUẤT</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="balance-box">
+            <h3>💰 Số dư Xu: <span id="currentBalance">---</span> xu</h3>
+            <p style="font-size: 0.9em; margin-top: 5px; color: #ddd;">Ghép ảnh hiện tại: **Miễn phí**</p>
+        </div>
+
+        <hr>
+        
+        <div id="core-features">
+            <h3>🎨 Thiết Lập Ảnh</h3>
+            <label for="baseImage">Ảnh Cơ Sở (Phần Bìa Tài Khoản/Giao Diện):</label>
+            <input type="file" id="baseImage" accept="image/*">
+
+            <label for="skinImages">Chọn Tất Cả Ảnh Trang Phục:</label>
+            <input type="file" id="skinImages" accept="image/*" multiple>
+
+            <label for="layoutMode">Chọn Chế Độ Ghép Ảnh:</label>
+            <select id="layoutMode">
+                <option value="long">Kho Skin Dài (Skin SS/EVO sẽ được làm to & Căn giữa)</option>
+                <option value="profile">Trang Cá Nhân (Ghép vào vị trí cố định)</option>
+            </select>
+            
+            <p style="color: #ccc; font-size: 0.9em; margin-top: -10px;">
+                *Hướng dẫn phân loại: Đặt tên file skin đặc biệt chứa: `_SS_`, `_SSS_`, `_EVO_3`, `_EVO_4`, hoặc `_EVO_5`.
+            </p>
+        </div>
+        
+        <hr>
+
+        <div id="vip-features">
+            <h3>✨ Tính Năng VIP (Tối ưu bán acc)</h3>
+            
+            <label for="brightnessControl">Tăng Độ Sáng/Rực Rỡ (Giá trị: <span id="brightnessValue">1.0</span>)</label>
+            <input type="range" id="brightnessControl" min="0.5" max="1.5" step="0.05" value="1.0">
+
+            <label for="borderRadiusControl">Tùy chỉnh Góc Bo Skin (Giá trị: <span id="borderRadiusValue">0</span> px)</label>
+            <input type="range" id="borderRadiusControl" min="0" max="25" step="1" value="0">
+            
+            <label for="watermarkText">Thêm Chữ Ký/Watermark (Tên shop, ID):</label>
+            <input type="text" id="watermarkText" placeholder="Ví dụ: Acc VIP Minh Thiện | SĐT: 09xx">
+        </div>
+        
+        <hr>
+
+        <button onclick="startMerging()">BẮT ĐẦU GHÉP TÀI KHOẢN 🚀</button>
+
+        <div id="adminToolBox">
+            <h3>🛡️ Admin Tool (Nhấn phím '/' để mở)</h3>
+            <div id="adminLogin">
+                 <input type="password" id="adminPassword" placeholder="Nhập Mật khẩu Admin">
+                 <button onclick="adminLogin()">ĐĂNG NHẬP ADMIN</button>
+            </div>
+            
+            <div id="adminDashboard" style="display: none;">
+                <h4 style="color: #FFD700;">Chào mừng, <span id="adminUsernameDisplay">Admin</span>!</h4>
+                
+                <p style="color: #ddd;">**Lệnh Admin:** /addx [usr] [xu], /subx [usr] [xu], /deluser [usr]</p>
+                
+                <div class="admin-controls-group">
+                    <input type="text" id="adminCommand" placeholder="Nhập lệnh và nhấn Thực thi">
+                    <button onclick="executeAdminCommand()">THỰC THI LỆNH</button>
+                </div>
+
+                <h4 style="color: #00aaff; margin-top: 20px;">⚡ Quick Actions:</h4>
+                <div class="admin-quick-actions">
+                    <button onclick="executeAdminCommand('/viewusers')" style="background-color: #555; color: #fff;">Xem Danh sách Tài khoản (Mock Log)</button>
+                </div>
+                
+                <p id="adminMessage" style="color: #FFD700; margin-top: 10px;"></p>
+                
+                <div id="adminUserList" style="margin-top: 20px;">
+                    </div>
+                
+                <button onclick="adminLogout()" style="background-color: #C2185B; margin-top: 20px;">ĐĂNG XUẤT ADMIN</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div id="result-area" class="container">
+        <h3>🖼️ Kết Quả Ghép Ảnh</h3>
+        <canvas id="outputCanvas"></canvas> 
+        <a id="downloadLink" href="#" download="TaiKhoanDaGhep.png">Tải Về Ảnh Đã Ghép</a>
+        <p id="message"></p>
+    </div>
+    
+    <button id="ai-support-button" onclick="showAISupport()">🤖</button>
+
+    <script>
+        const FEE = 0; // Phí ghép ảnh đã được đặt về 0
+        const ADMIN_PASS = 'thienvip'; 
+        let currentUserId = null; 
+
+        // --- AI Support Function ---
+        function showAISupport() {
+            alert("🤖 AI HỖ TRỢ: Chức năng này giúp tối ưu hóa ảnh của bạn! Vui lòng điều chỉnh thủ công thanh Độ Sáng, Góc Bo, và Watermark để đạt hiệu quả tốt nhất.");
+        }
+
+        // --- ADMIN TOOL LOGIC (Không đổi) ---
+        function adminLogin() {
+            const password = document.getElementById('adminPassword').value;
+            if (password === ADMIN_PASS) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminDashboard').style.display = 'block';
+                document.getElementById('adminMessage').textContent = '✅ Admin đã đăng nhập thành công!';
+                document.getElementById('adminUsernameDisplay').textContent = 'thienvip'; 
+                document.getElementById('adminUserList').innerHTML = ''; 
+            } else {
+                document.getElementById('adminMessage').textContent = '❌ Mật khẩu Admin không đúng.';
+            }
+            document.getElementById('adminPassword').value = '';
+        }
+        
+        function adminLogout() {
+            document.getElementById('adminLogin').style.display = 'block';
+            document.getElementById('adminDashboard').style.display = 'none';
+            document.getElementById('adminMessage').textContent = 'Admin đã đăng xuất.';
+            document.getElementById('adminUserList').innerHTML = '';
+            document.getElementById('adminCommand').value = '';
+        }
+        
+        function viewAllUsers() {
+            const userListContainer = document.getElementById('adminUserList');
+            userListContainer.innerHTML = '<h4>Danh sách Tài khoản Hiện tại (Lưu trên Trình duyệt)</h4>';
+            
+            let userKeys = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('minhthien_user_')) {
+                    userKeys.push(key);
+                }
+            }
+            
+            if (userKeys.length === 0) {
+                userListContainer.innerHTML += '<p style="color: #FFD700;">Chưa có tài khoản nào được đăng ký.</p>';
+                return;
+            }
+
+            let html = '<table style="width:100%; border-collapse: collapse; font-size: 0.9em;">';
+            html += '<thead><tr style="background-color: #333;"><th style="padding: 8px; border: 1px solid #555;">Tên User</th><th style="padding: 8px; border: 1px solid #555;">Số Dư (Xu)</th></tr></thead><tbody>';
+
+            userKeys.forEach(key => {
+                const username = key.replace('minhthien_user_', '');
+                const userData = JSON.parse(localStorage.getItem(key));
+                const balance = userData.balance ? userData.balance.toLocaleString() : 0;
+                
+                html += `<tr style="border-top: 1px solid #555;">
+                            <td style="padding: 8px; border: 1px solid #555;">${username}</td>
+                            <td style="padding: 8px; border: 1px solid #555; text-align: right; color: ${userData.balance > 0 ? '#4CAF50' : '#FF5722'};">${balance}</td>
+                         </tr>`;
+            });
+
+            html += '</tbody></table>';
+            userListContainer.innerHTML += html;
+        }
+
+        function executeAdminCommand(quickCommand = null) {
+            const command = quickCommand || document.getElementById('adminCommand').value.trim();
+            const msgElement = document.getElementById('adminMessage');
+            if (!quickCommand) document.getElementById('adminCommand').value = ''; 
+
+            const parts = command.split(/\s+/).filter(p => p.length > 0);
+            const cmd = parts[0];
+            const targetUser = parts[1];
+            const amount = parseInt(parts[2]);
+            const userDataKey = `minhthien_user_${targetUser}`;
+            const userDataString = localStorage.getItem(userDataKey);
+
+            if (cmd === '/addx' || cmd === '/subx') {
+                if (parts.length !== 3) {
+                    msgElement.textContent = '❌ Lỗi cú pháp: Sử dụng /addx [username] [số xu] hoặc /subx [username] [số xu].';
+                    return;
+                }
+
+                if (!userDataString) {
+                    msgElement.textContent = `❌ Lỗi: Tài khoản '${targetUser}' không tồn tại.`;
+                    return;
+                }
+
+                if (isNaN(amount) || amount <= 0) {
+                    msgElement.textContent = '❌ Lỗi: Số xu phải là số nguyên dương.';
+                    return;
+                }
+                
+                let userData = JSON.parse(userDataString);
+                let currentBalance = userData.balance || 0;
+                let newBalance;
+                let type;
+
+                if (cmd === '/addx') {
+                    newBalance = currentBalance + amount;
+                    type = 'Tăng';
+                } else { // /subx
+                    newBalance = Math.max(0, currentBalance - amount);
+                    type = 'Giảm';
+                }
+                
+                userData.balance = newBalance;
+                localStorage.setItem(userDataKey, JSON.stringify(userData));
+
+                msgElement.textContent = `✅ Thành công: ${type} ${amount.toLocaleString()} xu cho user '${targetUser}'. Số dư mới: ${newBalance.toLocaleString()}.`;
+                
+                if (targetUser === currentUserId) {
+                    updateAccountView();
+                }
+
+            } else if (cmd === '/deluser') {
+                 if (parts.length !== 2) {
+                    msgElement.textContent = '❌ Lỗi cú pháp: Sử dụng /deluser [username].';
+                    return;
+                }
+                if (!userDataString) {
+                    msgElement.textContent = `❌ Lỗi: Tài khoản '${targetUser}' không tồn tại.`;
+                    return;
+                }
+                
+                localStorage.removeItem(userDataKey);
+                msgElement.textContent = `✅ Thành công: Đã xóa tài khoản '${targetUser}'.`;
+                
+                if (targetUser === currentUserId) {
+                    logoutUser();
+                }
+                
+            } else if (cmd === '/viewusers') {
+                viewAllUsers();
+                msgElement.textContent = '✅ Đã tải danh sách tài khoản (Mock Log).';
+
+            } else {
+                msgElement.textContent = '❌ Lỗi: Lệnh không hợp lệ. Chỉ hỗ trợ /addx, /subx, /deluser, /viewusers.';
+            }
+        }
+        // ------------------------
+
+        // --- CHỨC NĂNG QUẢN LÝ TÀI KHOẢN ---
+        function updateAccountView() {
+            const loggedInView = document.getElementById('loggedInView');
+            const loggedOutView = document.getElementById('loggedOutView');
+            
+            if (currentUserId) {
+                document.getElementById('currentUsername').textContent = currentUserId;
+                loggedInView.style.display = 'block';
+                loggedOutView.style.display = 'none';
+                document.getElementById('currentBalance').textContent = getBalance().toLocaleString();
+            } else {
+                loggedOutView.style.display = 'block';
+                loggedInView.style.display = 'none';
+                document.getElementById('currentBalance').textContent = '---';
+            }
+        }
+
+        function registerUser() {
+            const username = document.getElementById('usernameInput').value.trim();
+            if (username.length < 3 || !/^[a-zA-Z0-9_\u00C0-\u1EF9]+$/.test(username)) { 
+                alert('⚠️ Tên đăng nhập phải có ít nhất 3 ký tự, không chứa dấu cách hoặc ký tự đặc biệt (ngoại trừ dấu gạch dưới và tiếng Việt).');
+                return;
+            }
+            if (localStorage.getItem(`minhthien_user_${username}`)) {
+                alert('❌ Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác hoặc ĐĂNG NHẬP.');
+                return;
+            }
+
+            const userData = { balance: 1000, tasks: {} }; // 1000 xu khởi điểm
+            localStorage.setItem(`minhthien_user_${username}`, JSON.stringify(userData));
+            
+            currentUserId = username;
+            alert(`🎉 Đăng ký thành công! Chào mừng ${username}. Bạn có 1000 xu khởi điểm.`);
+            document.getElementById('usernameInput').value = '';
+            updateAccountView();
+        }
+
+        function loginUser() {
+            const username = document.getElementById('usernameInput').value.trim();
+            if (!localStorage.getItem(`minhthien_user_${username}`)) {
+                alert('❌ Tên đăng nhập không tồn tại. Vui lòng ĐĂNG KÝ.');
+                return;
+            }
+
+            currentUserId = username;
+            alert(`✅ Đăng nhập thành công! Chào mừng trở lại ${username}.`);
+            document.getElementById('usernameInput').value = '';
+            updateAccountView();
+        }
+
+        function logoutUser() {
+            currentUserId = null;
+            alert('Đã đăng xuất.');
+            updateAccountView();
+        }
+        
+        // --- QUẢN LÝ XU CỐT LÕI ---
+        function getUserData() {
+            if (!currentUserId) return null;
+            const data = localStorage.getItem(`minhthien_user_${currentUserId}`);
+            return data ? JSON.parse(data) : { balance: 0, tasks: {} };
+        }
+
+        function saveUserData(data) {
+            if (currentUserId) {
+                localStorage.setItem(`minhthien_user_${currentUserId}`, JSON.stringify(data));
+                document.getElementById('currentBalance').textContent = data.balance.toLocaleString();
+            }
+        }
+
+        function getBalance() {
+            const data = getUserData();
+            return data ? data.balance : 0;
+        }
+
+        function setBalance(balance) {
+            const data = getUserData();
+            if (data) {
+                data.balance = balance;
+                saveUserData(data);
+            }
+        }
+        
+        function initializeApp() {
+            document.getElementById('brightnessControl').addEventListener('input', (e) => {
+                document.getElementById('brightnessValue').textContent = e.target.value;
+            });
+            document.getElementById('borderRadiusControl').addEventListener('input', (e) => {
+                document.getElementById('borderRadiusValue').textContent = e.target.value;
+            });
+
+            // Gán hàm xử lý ẩn/hiện admin tool bằng lệnh /admin
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '/') {
+                    e.preventDefault(); 
+                    
+                    const adminBox = document.getElementById('adminToolBox');
+                    const adminIsHidden = adminBox.style.display === 'none' || adminBox.style.display === '';
+                    
+                    if (adminIsHidden) {
+                        adminBox.style.display = 'block';
+                        document.getElementById('adminMessage').textContent = 'Admin tool đã bật. Vui lòng đăng nhập.';
+                        document.getElementById('adminDashboard').style.display = 'none';
+                        document.getElementById('adminLogin').style.display = 'block';
+                        document.getElementById('adminPassword').focus();
+                    } else {
+                        adminBox.style.display = 'none';
+                        adminLogout();
+                    }
+                }
+            });
+
+            document.getElementById('adminToolBox').style.display = 'none';
+            updateAccountView(); 
+        }
+        
+        window.onload = initializeApp;
+        // ---------------------------------------------
+        
+        
+        // *** CONFIGS & MERGING LOGIC ***
+        const LAYOUT_CONFIG = {
+            long: {
+                skinWidth: 150, skinHeight: 210, 
+                prioritySkinWidth: 310, prioritySkinHeight: 210,
+                maxCols: 4, spacingX: 10, spacingY: 10,
+                startX: 5, startYOffset: 10, priorityColsOccupied: 2 
+            },
+            profile: {
+                skinWidth: 100, skinHeight: 120,
+                prioritySkinWidth: 100, prioritySkinHeight: 120,
+                maxCols: 7, spacingX: 8, spacingY: 8,
+                startX: 10, fixedStartY: 650, priorityColsOccupied: 1 
+            }
+        };
+
+        function isPrioritySkin(fileName) {
+            const priorityKeywords = ['_SSS_', '_SS_', '_EVO_5', '_EVO_4', '_EVO_3'];
+            const upperCaseName = fileName.toUpperCase();
+            for (const keyword of priorityKeywords) {
+                if (upperCaseName.includes(keyword)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function applyBrightness(ctx, canvas, brightness) {
+            if (brightness === 1.0) return;
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            for (let i = 0; i < data.length; i += 4) {
+                data[i] = Math.min(255, data[i] * brightness);
+                data[i + 1] = Math.min(255, data[i + 1] * brightness);
+                data[i + 2] = Math.min(255, data[i + 2] * brightness);
+            }
+            ctx.putImageData(imageData, 0, 0);
+        }
+        
+        function drawRoundedImage(ctx, img, x, y, w, h, radius) {
+            if (radius === 0) {
+                ctx.drawImage(img, x, y, w, h);
+                return;
+            }
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + w - radius, y);
+            ctx.arcTo(x + w, y, x + w, y + radius, radius);
+            ctx.lineTo(x + w, y + h - radius);
+            ctx.arcTo(x + w, y + h, x + w - radius, y + h, radius);
+            ctx.lineTo(x + radius, y + h);
+            ctx.arcTo(x, y + h, x, y + h - radius, radius);
+            ctx.lineTo(x, y + radius);
+            ctx.arcTo(x, y, x + radius, y, radius);
+            ctx.closePath();
+            ctx.save();
+            ctx.clip();
+            ctx.drawImage(img, x, y, w, h);
+            ctx.restore();
+        }
+
+        function addWatermark(ctx, text, canvasWidth, canvasHeight) {
+            if (!text) return;
+            ctx.save();
+            ctx.font = 'bold 30px Arial';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)'; 
+            ctx.textAlign = 'center';
+            const x = canvasWidth / 2;
+            const y = canvasHeight - 20;
+            ctx.shadowColor = 'black';
+            ctx.shadowBlur = 5;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            ctx.fillText(text, x, y);
+            ctx.restore();
+        }
+
+        function startMerging() {
+            if (!currentUserId) { 
+                document.getElementById('message').textContent = '❌ Lỗi: Vui lòng ĐĂNG NHẬP để sử dụng tính năng ghép ảnh.'; 
+                return; 
+            }
+            
+            const baseFile = document.getElementById('baseImage').files[0];
+            const skinFiles = Array.from(document.getElementById('skinImages').files);
+            const layoutMode = document.getElementById('layoutMode').value;
+            const brightness = parseFloat(document.getElementById('brightnessControl').value);
+            const borderRadius = parseInt(document.getElementById('borderRadiusControl').value);
+            const watermarkText = document.getElementById('watermarkText').value.trim();
+            
+            const config = LAYOUT_CONFIG[layoutMode];
+            const canvas = document.getElementById('outputCanvas');
+            const ctx = canvas.getContext('2d');
+            const messageElement = document.getElementById('message');
+            const downloadLink = document.getElementById('downloadLink');
+
+            messageElement.textContent = 'Đang tiến hành ghép ảnh...';
+            downloadLink.style.display = 'none';
+
+            // --- KIỂM TRA ĐĂNG NHẬP & FILES ---
+            if (!baseFile || skinFiles.length === 0) {
+                messageElement.textContent = '⚠️ Vui lòng tải lên Ảnh Cơ Sở và ít nhất một Ảnh Trang Phục.';
+                return;
+            }
+            // --- LOGIC TRỪ XU ĐÃ BỊ XÓA ---
+
+            const skinsData = skinFiles.map(file => ({
+                file: file,
+                isPriority: isPrioritySkin(file.name),
+                w: isPrioritySkin(file.name) && layoutMode === 'long' ? config.prioritySkinWidth : config.skinWidth,
+                h: isPrioritySkin(file.name) && layoutMode === 'long' ? config.prioritySkinHeight : config.skinHeight,
+                cols: isPrioritySkin(file.name) && layoutMode === 'long' ? config.priorityColsOccupied : 1,
+            }));
+            
+            const baseImg = new Image();
+            
+            baseImg.onload = () => {
+                let startY = 0;
+                let currentX = config.startX;
+                let currentY = 0;
+                let totalRows = 0;
+                const renderPositions = []; 
+
+                skinsData.forEach(skin => {
+                    if (currentX + skin.w > baseImg.width && currentX !== config.startX) {
+                        currentY += config.skinHeight + config.spacingY;
+                        currentX = config.startX;
+                        totalRows++;
+                    }
+                    renderPositions.push({ ...skin, tempX: currentX, tempY: currentY });
+                    currentX += skin.w + config.spacingX;
+                });
+                if (skinsData.length > 0 && currentX !== config.startX) {
+                    totalRows++;
+                }
+
+                let finalCanvasWidth = baseImg.width;
+                let finalCanvasHeight;
+                if (layoutMode === 'long') {
+                    const skinsContainerHeight = (totalRows * config.skinHeight) + (totalRows > 0 ? ((totalRows - 1) * config.spacingY) : 0) + (config.startYOffset * 2);
+                    canvas.width = finalCanvasWidth;
+                    finalCanvasHeight = baseImg.height + skinsContainerHeight + (watermarkText ? 50 : 0);
+                    startY = baseImg.height + config.startYOffset; 
+                } else {
+                    canvas.width = finalCanvasWidth;
+                    finalCanvasHeight = baseImg.height;
+                    startY = config.fixedStartY;
+                }
+                canvas.height = finalCanvasHeight;
+
+                ctx.drawImage(baseImg, 0, 0, baseImg.width, baseImg.height);
+                
+                let loadedCount = 0;
+                
+                const processFinalSteps = () => {
+                    // KHÔNG TRỪ XU
+                    
+                    applyBrightness(ctx, canvas, brightness);
+                    addWatermark(ctx, watermarkText, canvas.width, canvas.height);
+
+                    messageElement.textContent = `✅ Ghép ảnh thành công! Dịch vụ hiện đang miễn phí.`;
+                    updateAccountView(); 
+                    const dataURL = canvas.toDataURL('image/png');
+                    downloadLink.href = dataURL;
+                    downloadLink.style.display = 'block';
+                }
+
+                const checkComplete = () => {
+                    if (loadedCount === skinsData.length) {
+                        processFinalSteps();
+                    }
+                };
+
+                const rows = renderPositions.reduce((acc, skin) => {
+                    const rowNum = Math.round((skin.tempY - (renderPositions.length > 0 ? renderPositions[0].tempY : 0)) / (config.skinHeight + config.spacingY));
+                    if (!acc[rowNum]) acc[rowNum] = [];
+                    acc[rowNum].push(skin);
+                    return acc;
+                }, {});
+
+                let imagesToLoadCount = 0;
+                Object.keys(rows).forEach(rowNum => {
+                    const rowSkins = rows[rowNum];
+                    const rowWidth = rowSkins.reduce((sum, skin) => sum + skin.w + config.spacingX, 0) - config.spacingX;
+                    const offset = layoutMode === 'long' ? Math.max(0, (finalCanvasWidth - rowWidth) / 2) : 0;
+                    
+                    rowSkins.forEach(skin => {
+                        imagesToLoadCount++;
+                        const skinImg = new Image();
+                        skinImg.onload = () => {
+                            const finalX = skin.tempX - config.startX + offset; 
+                            const finalY = skin.tempY + startY; 
+                            
+                            drawRoundedImage(ctx, skinImg, finalX, finalY, skin.w, skin.h, borderRadius);
+
+                            loadedCount++;
+                            checkComplete();
+                        };
+                        skinImg.onerror = () => {
+                            console.error('Lỗi khi tải skin: ' + skin.file.name);
+                            loadedCount++;
+                            checkComplete();
+                        };
+                        skinImg.src = URL.createObjectURL(skin.file);
+                    });
+                });
+                
+                if (imagesToLoadCount === 0) {
+                    processFinalSteps();
+                }
+            };
+
+            baseImg.onerror = () => { messageElement.textContent = 'Lỗi khi tải ảnh cơ sở (bìa).'; };
+            baseImg.src = URL.createObjectURL(baseFile);
+        }
+    </script>
+
+</body>
+</html>
