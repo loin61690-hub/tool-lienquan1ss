@@ -3,76 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HỆ THỐNG GHÉP ẢNH LIÊN QUÂN CHUYÊN NGHIỆP</title>
+    <title>GHÉP ẢNH LIÊN QUÂN MOBILE 2.0 - TOOL VIP</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        /* CSS RESET & BOX MODEL */
-        * {
-            box-sizing: border-box; /* Fix lỗi tràn chữ/ô */
-        }
-        /* BASE & FONT (Hiệu ứng nhẹ nhàng) */
+        /* BASE & FONT (Hiệu ứng nhún nhẹ nhàng) */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111827; /* Nền Tối Sâu, không quá gắt */
+            background-color: #0b0b1a; /* Nền Tối */
             color: #E0E0E0;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            /* Hiệu ứng nhún/thở cho toàn bộ body */
+            animation: body-breathing 4s infinite alternate;
+        }
+        @keyframes body-breathing {
+            from { transform: scale(1); }
+            to { transform: scale(1.005); }
         }
 
-        /* HEADER & TITLE (Chữ không quá to) */
+        /* HEADER & TITLE (Chữ lớn, Neon mạnh) */
         .header-section {
             text-align: center;
             margin-bottom: 30px;
             padding: 15px 20px;
-            background-color: #1f2937; /* Xám Đậm */
-            border-radius: 8px;
-            border-bottom: 3px solid #3b82f6; /* Xanh Dương Hiện Đại */
+            background: linear-gradient(90deg, #38003c, #1a0026);
+            border-radius: 10px;
+            border-bottom: 3px solid #FF5722;
             width: 100%;
             max-width: 800px;
         }
         .header-section h1 {
-            color: #fff;
-            font-size: 2em; /* Giảm kích thước H1 */
+            color: #FFD700; 
+            font-size: 2.5em; /* Chữ to */
             margin: 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .header-section p {
-            color: #9ca3af;
-            font-size: 1em;
-            margin-top: 5px;
+            text-shadow: 0 0 10px #ff33ff, 0 0 20px #00aaff; /* Hiệu ứng Neon */
         }
 
         /* CONTROL PANEL */
         .control-panel {
-            background-color: #1f2937;
+            background-color: #1a1a2e;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
             width: 100%;
             max-width: 800px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         .upload-group, .slider-group {
             margin-bottom: 15px;
             padding: 10px 0;
-            border-bottom: 1px dashed #374151;
+            border-bottom: 1px dashed #444;
         }
 
         .control-panel label {
             display: block;
             margin-bottom: 8px;
-            color: #3b82f6; /* Xanh Dương */
-            font-weight: 600;
+            color: #ff33ff; 
+            font-weight: bold;
+            font-size: 1.1em; /* Chữ lớn */
         }
 
         .control-panel input[type="file"] {
             padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #4b5563;
-            background-color: #2c3748;
+            border-radius: 5px;
+            border: 1px solid #00aaff;
+            background-color: #242442;
             color: #E0E0E0;
             width: 100%;
             cursor: pointer;
@@ -81,20 +79,18 @@
         /* Nút Tải Xuống */
         #downloadButton {
             width: 100%;
-            padding: 14px;
-            background-color: #10b981; /* Xanh Lá Mượt */
+            padding: 15px;
+            background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 6px;
-            font-size: 1em;
-            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.1em;
             cursor: pointer;
-            transition: background-color 0.2s, transform 0.1s;
+            transition: background-color 0.3s;
             margin-top: 10px;
         }
         #downloadButton:hover {
-            background-color: #059669;
-            transform: translateY(-1px);
+            background-color: #388E3C;
         }
 
         /* GHÉP ẢNH CANVAS */
@@ -103,10 +99,9 @@
             width: 700px; 
             height: 450px;
             margin-top: 20px;
-            border: 4px solid #ef4444; /* Viền Đỏ (LQMB) */
+            border: 5px solid #ff5722; 
             background-color: #000;
             overflow: hidden; 
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
         }
         
         .collage-image {
@@ -137,42 +132,34 @@
         /* Slider */
         input[type="range"] {
             width: 100%;
-            height: 6px;
+            height: 8px;
             -webkit-appearance: none;
-            background: #4b5563;
-            border-radius: 3px;
-            outline: none;
+            background: #444;
+            border-radius: 5px;
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
-            background: #ef4444; /* Đỏ */
+            background: #ff5722;
             cursor: pointer;
-            box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
+            box-shadow: 0 0 5px #ff5722;
         }
         .slider-group span {
             font-weight: normal;
-            color: #10b981;
+            color: #00aaff;
             margin-left: 10px;
-        }
-        .instructions {
-            color: #6ee7b7;
-            text-align: center;
-            font-size: 0.9em;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dotted #374151;
+            font-size: 1.1em; /* Chữ to */
         }
     </style>
 </head>
 <body>
 
     <div class="header-section">
-        <h1>HỆ THỐNG GHÉP ẢNH LIÊN QUÂN CHUYÊN NGHIỆP</h1>
-        <p>Tải ảnh nền và ảnh nhân vật để tạo tác phẩm độc đáo của riêng bạn.</p>
+        <h1>⚔️ GHÉP ẢNH LIÊN QUÂN MOBILE 2.0</h1>
+        <p>Tải ảnh nền và ảnh nhân vật, Kéo Thả & Điều chỉnh Kích thước dễ dàng.</p>
     </div>
 
     <div class="control-panel">
@@ -196,7 +183,7 @@
             <button id="downloadButton" onclick="exportCollage()">4. XUẤT ẢNH HOÀN CHỈNH (TẢI VỀ)</button>
         </div>
         
-        <p class="instructions">
+        <p style="color: #FFD700; text-align: center; margin-top: 10px;">
             *Ảnh nhân vật có thể KÉO, THẢ và điều chỉnh kích thước bằng thanh trượt.
         </p>
     </div>
@@ -206,7 +193,7 @@
         <img id="characterImg" class="collage-image" src="" alt="Ảnh Nhân Vật" style="display: none;"> 
     </div>
 
-    <a id="downloadLink" download="LienQuan_Collage_Pro.png"></a>
+    <a id="downloadLink" download="LienQuan_Collage_VIP.png"></a>
 
     <script>
         const container = document.getElementById('collageContainer');
